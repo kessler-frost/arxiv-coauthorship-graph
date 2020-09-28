@@ -48,6 +48,6 @@ def save_relevant_list_of_ids(queries, filename):
 
 if __name__ == "__main__":
 
-    queries = ["deep learning"]
+    queries = ["deep learning", "computer vision", "machine learning"]
 
     save_relevant_list_of_ids(queries, "relevant_paper_ids.txt")
