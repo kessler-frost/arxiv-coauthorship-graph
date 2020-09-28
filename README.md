@@ -1,4 +1,4 @@
-# arxiv-coauthorship-graph
+# Arxiv Co-authorship Graph
 
 ## Requirements
 Packages used in this project:
@@ -16,8 +16,10 @@ To retrieve paper IDs from arxiv of topics which are relevant to us, in this cas
 
 `python arxiv_crawler.py`
 
+## Pickle obtained Graph
 After that we create a pickle of the co-authorship graph so that we do not have to do the time consuming process of crawling the arxiv again. This can be done by calling the `pickle_graph()` function in `graph_and_histogram.py` file.
 
+## Visualize Graph and Distributions
 Now, to visualize the graph and to obtain different measures used in the project including Degree Distribution, Closeness, and Betweenness, just run,
 
 `python graph_and_histogram.py`
