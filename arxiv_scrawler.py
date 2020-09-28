@@ -12,14 +12,14 @@ def get_paper_id_from_url(url_string):
 def collect_relevant_papers(query_string, node_count):
 
     papers = arxiv.query(query=query_string,
-                    id_list=[],
-                    max_results=50000,
-                    start=0,
-                    sort_by="relevance",
-                    sort_order="descending",
-                    prune=True,
-                    iterative=False,
-                    max_chunk_results=1000)
+                         id_list=[],
+                         max_results=50000,
+                         start=0,
+                         sort_by="relevance",
+                         sort_order="descending",
+                         prune=True,
+                         iterative=False,
+                         max_chunk_results=1000)
 
     auths = collections.defaultdict(lambda: [])
 
@@ -48,7 +48,6 @@ def save_relevant_list_of_ids(queries, filename):
 
 if __name__ == "__main__":
 
-    queries = ["deep learning", "machine learning", "computer vision",
-               "natural language processing", "data science", "image processing", "artificial intelligence"]
+    queries = ["deep learning"]
 
-    save_relevant_list_of_ids(queries, "Relevant_Paper_Ids_3.txt")
+    save_relevant_list_of_ids(queries, "relevant_paper_ids.txt")

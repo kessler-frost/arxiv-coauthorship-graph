@@ -1,14 +1,14 @@
 import arxiv
 
 
-def get_arxiv_cuthor_connect_edges(filename="Relevant_Paper_Ids_3.txt"):
+def get_arxiv_couthor_connect_edges(filename="relevant_paper_ids.txt"):
 
     paper_ids = open(filename, "r").read().split()
     papers = []
     batch = 0
     batch_interval = 500
     while batch < len(paper_ids):
-        papers += arxiv.query(id_list=paper_ids[batch:min(batch+batch_interval, len(paper_ids))])
+        papers += arxiv.query(id_list=paper_ids[batch:min(batch + batch_interval, len(paper_ids))])
         batch += batch_interval
 
     edges = []
@@ -19,7 +19,3 @@ def get_arxiv_cuthor_connect_edges(filename="Relevant_Paper_Ids_3.txt"):
                 edges.append([auth1, auth2])
 
     return edges
-
-
-# print(get_arxiv_cuthor_connect_edges())
-
